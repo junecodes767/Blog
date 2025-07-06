@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% block extra_css %}
+        <link rel="stylesheet" href="{% static 'app/css/post_collection.css' %}">
+    {% endblock %}
+
+<h3>My Collected Posts </h3>
+    {% include "app\include\post.html" %}
+{% endblock %}

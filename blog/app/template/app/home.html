@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+
+    {% block extra_css %}
+        <link rel="stylesheet" href="{% static 'app/css/home.css' %}">
+    {% endblock %}
+
+    <div class="nav-block-extension">
+        <!-- box that orangizes the different flex elements -->
+        <div class="flex-box">
+            <!-- top box -->
+            <div class="top-flex-box">
+                <!-- top right box -->
+                
+                
+                <img id="profile-photo"src="{%static 'app/images/priestest-headshot.jpg'%}" alt="">
+
+                <!-- top left box -->
+                <h1 >Jewel's blog</h1>
+
+            </div>
+            <!-- bottom box -->
+            <div class="bottom-flex-box">
+                <p> Hi I am Jewel and love to blog about what I learn in tech!</p>
+            </div>
+        </div>
+    </div>
+    <div class="post-cards">
+        <h1 id="title"> My latest thoughts</h1>
+
+        <div class="latest-post-view">
+            <div id="post-1">
+                <img src="{%static 'app/images/nature.jpeg' %}" alt="nature">
+                <h4> Nature at its best</h4>
+                <p> Nature is amazing!The amounts of inspiration and I get when walking in nature is incredible!</p>
+            </div>
+            <div id="post-2">
+                <img src="{%static 'app/images/mountain.jpg' %}" alt="moutain">
+                <h4> Mountain Hiking</h4>
+                <p> Nature is amazing!The amounts of inspiration and I get when walking in nature is incredible!</p>
+            </div>
+            <div id="post-3">
+                <img src="{%static 'app/images/code.jpeg' %}" alt="code">
+                <h4> Programming is great!</h4>
+                <p> Nature is amazing!The amounts of inspiration and I get when walking in nature is incredible!</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- <div id="footer">
+        <p>hello there</p>
+
+    </div> -->
+
+{% endblock %}

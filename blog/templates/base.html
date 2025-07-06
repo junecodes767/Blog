@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar{
+            display: flex;
+            position: sticky;
+            align-items: center;
+            justify-content: space-between;
+            top: 0px;
+            background: #5246bc;
+            background-blend-mode: darken;
+            background-size: cover;
+            color: white;
+            padding: 10px 20px;
+            z-index: 999999;
+            /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); */
+
+
+        }
+        .nav-list{
+            display: flex;
+            list-style: none;
+        }
+        .nav-list li{
+            margin-right: 20px;
+            font-size: 14pt;
+            font-family: 'Helvetica', sans-serif;
+
+
+        }
+
+        .nav-list li a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s ease-in-out;
+        }
+        .nav-list li:first-child{
+            font-size:20pt ;
+            margin-left: 10rem;
+        }
+        .nav-list li:last-child{
+            margin-left: 50rem;
+        }
+        
+
+        
+    </style>
+    {% block extra_css %}{% endblock %}
+
+</head>
+ 
+<body>
+
+    <nav class="nav-bar">
+        <ul class="nav-list">
+            <li id="blog-name"><a href="{% url 'home' %}">Jewel's Blog</a></li>
+            <li id="post"> <a href="{% url 'posts_page' %}">All Posts</a></li>
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    
+</body>
+</html>
