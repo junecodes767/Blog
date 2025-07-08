@@ -4,6 +4,8 @@
 
     {% block extra_css %}
         <link rel="stylesheet" href="{% static 'app/css/home.css' %}">
+        <link rel="stylesheet" href="{% static 'app/css/post-preview.css' %}">
+
     {% endblock %}
 
     <div class="nav-block-extension">
@@ -30,21 +32,11 @@
         <h1 id="title"> My latest thoughts</h1>
 
         <div class="latest-post-view">
-            <div id="post-1">
-                <img src="{%static 'app/images/nature.jpeg' %}" alt="nature">
-                <h4> Nature at its best</h4>
-                <p> Nature is amazing!The amounts of inspiration and I get when walking in nature is incredible!</p>
-            </div>
-            <div id="post-2">
-                <img src="{%static 'app/images/mountain.jpg' %}" alt="moutain">
-                <h4> Mountain Hiking</h4>
-                <p> Nature is amazing!The amounts of inspiration and I get when walking in nature is incredible!</p>
-            </div>
-            <div id="post-3">
-                <img src="{%static 'app/images/code.jpeg' %}" alt="code">
-                <h4> Programming is great!</h4>
-                <p> Nature is amazing!The amounts of inspiration and I get when walking in nature is incredible!</p>
-            </div>
+            <ul>
+                {% for post in posts %}
+                    {% include "app\include\post.html" %}
+                {% endfor %}
+            </ul>
         </div>
 
     </div>

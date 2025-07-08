@@ -4,8 +4,22 @@
 {% block content %}
 {% block extra_css %}
         <link rel="stylesheet" href="{% static 'app/css/post_collection.css' %}">
+        <link rel="stylesheet" href="{% static 'app/css/post-preview.css' %}">
+
     {% endblock %}
 
 <h3>My Collected Posts </h3>
-    {% include "app\include\post.html" %}
+
+
+    
+    <ul class="preview">
+        {% for post in posts %}
+            {% include "app\include\post.html" %}
+        {% endfor %}
+        
+ 
+
+
+
+    </ul>
 {% endblock %}

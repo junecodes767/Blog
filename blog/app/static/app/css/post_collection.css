@@ -31,29 +31,15 @@ body{
     margin-top: 20px;
 
 }
-.post-collection div:hover{
-    background: #5246bc;
-    width: 310px;
-    height:320px ;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
 
 
-}
-.post-collection div{
-    /* border: dashed 2px black; */
-    width: 300px;
-    background-color: white;
-    border-radius: 15px;
-    height: 300px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-
-}
 .post-collection h4{
     margin-top: 4px;
     text-align: center;
     font-family: 'Verdana', sans-serif;
 
 }
+
 
 .post-collection p{
     margin-top: 15px;
@@ -64,3 +50,6 @@ body{
     font-size: 11pt;
 
 }
+
+.post-collection ul{
+ }
