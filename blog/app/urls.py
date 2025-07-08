@@ -1,6 +1,6 @@
 from django.urls import path
-from app.views import Nature_post
+from app import views
 
 urlpatterns = [
-    path('<slug:slug>/',Nature_post.as_view(),name='pageview')
+    path('<slug:slug>/',views.post_detail,name='pageview')
 ]

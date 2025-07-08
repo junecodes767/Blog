@@ -1,20 +1,20 @@
 {% load static %}
 
-<div class="post-collection">
-    <div>
-      <img src="{%static 'app/images/nature.jpeg' %}" alt="nature">
-                <h4> Nature at its best</h4>
-                <p> Nature is amazing!The amounts of inspiration and I get when walking in nature is incredible!</p>  
-    </div>
-    <div>
-        <img src="{%static 'app/images/mountain.jpg' %}" alt="moutain">
-                <h4> Mountain Hiking</h4>
-                <p> Nature is amazing!The amounts of inspiration and I get when walking in nature is incredible!</p>
 
-    </div>
-    <div>
-        <img src="{%static 'app/images/code.jpeg' %}" alt="code">
-                <h4> Programming is great!</h4>
-                <p> Nature is amazing!The amounts of inspiration and I get when walking in nature is incredible!</p>
-    </div>
-</div>
+    
+   
+<li>
+    <article class="post">
+        <a href='{% url "pageview" post.slug %}'>
+            <img src="{%static 'app/images/'|add:post.image %}" alt="moutain">
+            <div class="post___content">
+                <h4>{{post.title|capfirst}}</h4>
+                
+                <p> 
+                  {{post.excerpt}}
+                </p>
+            </div>
+        </a>
+    </article>
+</li>
+

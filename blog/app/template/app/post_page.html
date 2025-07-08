@@ -9,18 +9,17 @@
 {% block content %}
 
     <div class="card-1">
-        <h1>{{title}}</h1>
+        <h1>{{posts.title}}</h1>
         <div>
-            <img src="{% static image_url %}" alt="nature">
-            <h5>{{author}}</h5>
-            <p>{{last_updated_date}}</p>
+            <img src="{% static 'app/images/'|add:posts.image  %}" alt="nature">
+            <h5>{{posts.author}}</h5>
+            <p>{{posts.date|date:"d M Y"}}</p>
         </div>
     </div>
 
     <div class="card-2">
-        <p>{{blog_content}}</p>
-        <p>{{blog_content}}</p>
-        <p>{{blog_content}}</p>
+        <p>{{posts.content}}</p>
+        
 
 
     </div>
